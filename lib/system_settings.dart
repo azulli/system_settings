@@ -5,91 +5,116 @@ import 'package:flutter/services.dart';
 class SystemSettings {
   static const MethodChannel _channel = const MethodChannel('system_settings');
 
-  static Future<void> app() async {
-    return await _channel.invokeMethod('app');
+  static Future<void> app({showInRecents = true}) async {
+    return await _channel.invokeMethod('app', {"showInRecents": showInRecents});
   }
 
-  static Future<void> appNotifications() async {
-    return await _channel.invokeMethod('app-notifications');
+  static Future<void> appNotifications({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('app-notifications', {"showInRecents": showInRecents});
   }
 
-  static Future<void> system() async {
-    return await _channel.invokeMethod('system');
+  static Future<void> system({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('system', {"showInRecents": showInRecents});
   }
 
-  static Future<void> location() async {
-    return await _channel.invokeMethod('location');
+  static Future<void> location({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('location', {"showInRecents": showInRecents});
   }
 
-  static Future<void> wifi() async {
-    return await _channel.invokeMethod('wifi');
+  static Future<void> wifi({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('wifi', {"showInRecents": showInRecents});
   }
 
-  static Future<void> bluetooth() async {
-    return await _channel.invokeMethod('bluetooth');
+  static Future<void> bluetooth({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('bluetooth', {"showInRecents": showInRecents});
   }
 
-  static Future<void> security() async {
-    return await _channel.invokeMethod('security');
+  static Future<void> security({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('security', {"showInRecents": showInRecents});
   }
 
-  static Future<void> display() async {
-    return await _channel.invokeMethod('display');
+  static Future<void> display({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('display', {"showInRecents": showInRecents});
   }
 
-  static Future<void> date() async {
-    return await _channel.invokeMethod('date');
+  static Future<void> date({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('date', {"showInRecents": showInRecents});
   }
 
-  static Future<void> sound() async {
-    return await _channel.invokeMethod('sound');
+  static Future<void> sound({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('sound', {"showInRecents": showInRecents});
   }
 
-  static Future<void> apps() async {
-    return await _channel.invokeMethod('apps');
+  static Future<void> apps({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('apps', {"showInRecents": showInRecents});
   }
 
-  static Future<void> wireless() async {
-    return await _channel.invokeMethod('wireless');
+  static Future<void> wireless({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('wireless', {"showInRecents": showInRecents});
   }
 
-  static Future<void> deviceInfo() async {
-    return await _channel.invokeMethod('device-info');
+  static Future<void> deviceInfo({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('device-info', {"showInRecents": showInRecents});
   }
 
-  static Future<void> dataUsage() async {
-    return await _channel.invokeMethod('data-usage');
+  static Future<void> dataUsage({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('data-usage', {"showInRecents": showInRecents});
   }
 
-  static Future<void> dataRoaming() async {
-    return await _channel.invokeMethod('data-roaming');
+  static Future<void> dataRoaming({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('data-roaming', {"showInRecents": showInRecents});
   }
 
-  static Future<void> locale() async {
-    return await _channel.invokeMethod('locale');
+  static Future<void> locale({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('locale', {"showInRecents": showInRecents});
   }
 
-  static Future<void> defaultApps() async {
-    return await _channel.invokeMethod('default-apps');
+  static Future<void> defaultApps({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('default-apps', {"showInRecents": showInRecents});
   }
 
-  static Future<void> airplaneMode() async {
-    return await _channel.invokeMethod('airplane-mode');
+  static Future<void> airplaneMode({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('airplane-mode', {"showInRecents": showInRecents});
   }
 
-  static Future<void> privacy() async {
-    return await _channel.invokeMethod('privacy');
+  static Future<void> privacy({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('privacy', {"showInRecents": showInRecents});
   }
 
-  static Future<void> accessibility() async {
-    return await _channel.invokeMethod('accessibility');
+  static Future<void> accessibility({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('accessibility', {"showInRecents": showInRecents});
   }
 
-  static Future<void> internalStorage() async {
-    return await _channel.invokeMethod('internal-storage');
+  static Future<void> internalStorage({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('internal-storage', {"showInRecents": showInRecents});
   }
 
-  static Future<void> notificationPolicy() async {
-    return await _channel.invokeMethod('notification-policy');
+  static Future<void> notificationPolicy({showInRecents = true}) async {
+    return await _channel
+        .invokeMethod('notification-policy', {"showInRecents": showInRecents});
+  }
+
+  static Future<void> nfc({showInRecents = true}) async {
+    return await _channel.invokeMethod('nfc', {"showInRecents": showInRecents});
   }
 }
